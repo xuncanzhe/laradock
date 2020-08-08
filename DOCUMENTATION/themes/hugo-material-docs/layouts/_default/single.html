@@ -20,11 +20,11 @@
 <main class="main">
 	<div class="drawer">
 		{{ partial "drawer" . }}
-	</div>
+    </div>
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+            <h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 
 			{{ .Content }}
 
@@ -32,6 +32,7 @@
 				{{ with .Site.Params.copyright }}
 				&copy; {{ $.Now.Format "2006" }} {{ . }} &ndash;
 				{{ end }}
+				<br><br>
 				Documentation built with
 				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
 				using the
